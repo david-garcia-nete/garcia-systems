@@ -35,12 +35,59 @@ button:focus-visible {
   padding: 0 1.5rem;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 17, 32, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  justify-content: flex-end;
+}
+
+.nav a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #cbd5f5;
+  font-weight: 600;
+}
+
+.nav a[aria-current="page"] {
+  border-color: rgba(148, 163, 184, 0.4);
+  background: rgba(148, 163, 184, 0.08);
+  color: #f8fafc;
+}
+
 .hero {
   padding: 4rem 0 3rem;
   background: radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 60%),
     #0b1120;
   border-bottom: 1px solid rgba(148, 163, 184, 0.15);
   text-align: center;
+}
+
+.page-hero {
+  padding: 3rem 0 2.5rem;
 }
 
 .eyebrow {
@@ -118,6 +165,11 @@ h1 {
   background: rgba(15, 23, 42, 0.6);
 }
 
+.language-toggle {
+  margin-top: 1.5rem;
+  color: #94a3b8;
+}
+
 main {
   padding: 2.5rem 0 3rem;
   display: grid;
@@ -172,9 +224,34 @@ h3 {
   background: rgba(15, 23, 42, 0.5);
 }
 
+.list {
+  margin: 1rem 0 0.5rem;
+  padding-left: 1.2rem;
+  color: #cbd5f5;
+}
+
+.list li {
+  margin-bottom: 0.6rem;
+}
+
+.inline-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
 .contact a {
   font-weight: 600;
   color: #93c5fd;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+.callout {
+  text-align: center;
 }
 
 footer {
@@ -187,6 +264,15 @@ footer {
 @media (max-width: 720px) {
   .hero {
     padding: 3.5rem 0 2.5rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    justify-content: flex-start;
   }
 
   .services-grid {
