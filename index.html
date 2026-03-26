@@ -11,18 +11,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="home">
     <div class="container nav-bar">
       <a class="logo" href="index.html">Garcia Systems</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
       <nav class="nav" id="primary-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a class="lang-switch" href="es/index.html" lang="es">Español</a>
+        <a data-nav-item="home" href="#home" aria-current="page">Home</a>
+        <a data-nav-item="about" href="#about">About</a>
+        <a data-nav-item="services" href="#services">Services</a>
+        <a data-nav-item="contact" href="#contact">Contact</a>
+        <a class="lang-switch" data-nav-item="languageToggle" href="es/index.html" lang="es">Español</a>
       </nav>
     </div>
   </header>
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="card">
+    <section id="about" class="card">
       <h2>Who This Is For</h2>
       <p>
         Small businesses, nonprofits, and local organizations that need

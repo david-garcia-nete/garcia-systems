@@ -11,18 +11,18 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="home">
     <div class="container nav-bar">
       <a class="logo" href="../index.html">Garcia Systems</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
       <nav class="nav" id="primary-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../services.html">Services</a>
-        <a href="../contact.html">Contact</a>
-        <a class="lang-switch" href="../index.html" lang="en">English</a>
+        <a data-nav-item="home" href="#home">Inicio</a>
+        <a data-nav-item="about" href="#about">Nosotros</a>
+        <a data-nav-item="services" href="#servicios">Servicios</a>
+        <a data-nav-item="contact" href="#contact">Contacto</a>
+        <a class="lang-switch" data-nav-item="languageToggle" href="../index.html" lang="en">English</a>
       </nav>
     </div>
   </header>
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="card">
+    <section id="about" class="card">
       <h2>Por qué trabajar conmigo</h2>
       <p>
         Más de 10 años construyendo y manteniendo sistemas en PHP, Laravel y MySQL, con integraciones confiables.
@@ -75,7 +75,7 @@
       </p>
     </section>
 
-    <section class="card contact">
+    <section id="contact" class="card contact">
       <h2>Contacto</h2>
       <p>Envíame un correo con lo que necesitas y responderé con los próximos pasos.</p>
       <div class="hero-actions">
