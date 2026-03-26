@@ -46,6 +46,8 @@ button:focus-visible {
 
 .nav-bar {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
   gap: 0.75rem;
   padding: 0.8rem 0;
 }
@@ -56,10 +58,85 @@ button:focus-visible {
   letter-spacing: 0.01em;
 }
 
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.7);
+  color: #f8fafc;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-toggle:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(148, 163, 184, 0.55);
+}
+
+.menu-icon {
+  position: relative;
+  width: 1.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: background 0.2s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.menu-icon::before {
+  top: -0.36rem;
+}
+
+.menu-icon::after {
+  top: 0.36rem;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-icon {
+  background: transparent;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-icon::before {
+  transform: translateY(0.36rem) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-icon::after {
+  transform: translateY(-0.36rem) rotate(-45deg);
+}
+
 .nav {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.35rem);
+  transition: max-height 0.28s ease, opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.28s;
+}
+
+.nav.is-open {
+  max-height: 24rem;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: max-height 0.28s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
 .nav a {
@@ -284,6 +361,10 @@ footer {
     padding: 0 1.5rem;
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
   .nav-bar {
     display: flex;
     align-items: center;
@@ -296,6 +377,12 @@ footer {
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 0.7rem;
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    transform: none;
+    transition: none;
   }
 
   .nav a {
