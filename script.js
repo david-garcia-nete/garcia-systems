@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       links: {
         home: '#home',
         about: '#about',
-        services: '#servicios',
+        services: '#services',
         contact: '#contact',
       },
       languageCode: 'en',
@@ -110,4 +110,59 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const sectionKeys = ['home', 'about', 'services', 'contact'];
+  const sectionNodes = sectionKeys
+    .map((key) => {
+      const selector = translations[currentLanguage]?.links[key];
+      if (!selector || !selector.startsWith('#')) {
+        return null;
+      }
+
+      return {
+        key,
+        node: document.querySelector(selector),
+      };
+    })
+    .filter((entry) => entry && entry.node);
+
+  const setActiveNavItem = (activeKey) => {
+    document.querySelectorAll('.nav [data-nav-item]').forEach((item) => {
+      const key = item.getAttribute('data-nav-item');
+      if (!key || !sectionKeys.includes(key)) {
+        return;
+      }
+
+      if (key === activeKey) {
+        item.setAttribute('aria-current', 'page');
+      } else {
+        item.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  if (sectionNodes.length > 0) {
+    setActiveNavItem('home');
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length === 0) {
+        return;
+      }
+
+      const top = visible[0].target;
+      const matchedSection = sectionNodes.find((entry) => entry.node === top);
+      if (matchedSection) {
+        setActiveNavItem(matchedSection.key);
+      }
+    }, {
+      threshold: [0.2, 0.4, 0.6],
+      rootMargin: '-20% 0px -55% 0px',
+    });
+
+    sectionNodes.forEach(({ node }) => observer.observe(node));
+  }
 });
