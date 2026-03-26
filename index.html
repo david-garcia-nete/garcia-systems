@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Garcia Systems & Consulting | Williamsburg, VA</title>
+  <title>Garcia Systems | Williamsburg, VA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Practical software, automation, and systems consulting for small businesses in Williamsburg, VA. English & Spanish support available.">
-  <meta property="og:title" content="Garcia Systems & Consulting | Williamsburg, VA">
+  <meta property="og:title" content="Garcia Systems | Williamsburg, VA">
   <meta property="og:description" content="Practical software, automation, and systems consulting for small businesses in Williamsburg, VA. English & Spanish support available.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
@@ -15,11 +15,11 @@
     <div class="container nav-bar">
       <a class="logo" href="index.html">Garcia Systems</a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+        <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-        <a href="es/index.html">Español</a>
+        <a class="lang-switch" href="es/index.html" lang="es">Español</a>
       </nav>
     </div>
   </header>
@@ -27,10 +27,10 @@
   <section class="hero">
     <div class="container">
       <p class="eyebrow">Williamsburg, VA · English & Spanish</p>
-      <h1>Garcia Systems & Consulting</h1>
-      <p class="tagline">Practical software and systems help for small businesses</p>
+      <h1>Garcia Systems</h1>
+      <p class="tagline">Practical software and systems help for small businesses.</p>
       <div class="hero-actions">
-        <a class="btn" href="mailto:david.garcia.csci@gmail.com">Email Me</a>
+        <a class="btn" href="mailto:david@garciasystems.org">Email Me</a>
         <a class="btn btn-secondary" href="#services">View Services</a>
       </div>
       <div class="badges" aria-label="Trust badges">
@@ -90,23 +90,20 @@
       </ol>
     </section>
 
-    <section class="card">
-      <h2>Languages</h2>
-      <p>English & Spanish</p>
-    </section>
-
     <section class="card contact" id="contact">
       <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:david.garcia.csci@gmail.com">david.garcia.csci@gmail.com</a><br>
-        Call/Text: <a href="tel:+17577418683">757-741-8683</a><br>
-        Location: Williamsburg, VA
-      </p>
+      <div class="contact-lines">
+        <span class="contact-line">Email: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a></span>
+        <span class="contact-line">Call/Text: <a href="tel:+17577418683">757-741-8683</a></span>
+        <span class="contact-line">LinkedIn: <a href="https://www.linkedin.com/in/netdavid/" target="_blank" rel="noopener noreferrer">linkedin.com/in/netdavid</a></span>
+        <span class="contact-line">Location: Williamsburg, VA</span>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Garcia Systems & Consulting<br>Email: <a href="mailto:david.garcia.csci@gmail.com">david.garcia.csci@gmail.com</a> · Call/Text: <a href="tel:+17577418683">757-741-8683</a></p>
+    <p>&copy; 2025 Garcia Systems</p>
+    <p class="footer-links">Email: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a> · Call/Text: <a href="tel:+17577418683">757-741-8683</a> · LinkedIn: <a href="https://www.linkedin.com/in/netdavid/" target="_blank" rel="noopener noreferrer">netdavid</a></p>
   </footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# Garcia Systems & Consulting
+# Garcia Systems
 
 Local software, automation, and systems consulting based in Williamsburg, VA.
 
