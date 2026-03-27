@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <title>Garcia Systems | Williamsburg, VA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Practical software, automation, and systems consulting for small businesses in Williamsburg, VA. English & Spanish support available.">
+  <meta name="description" content="Garcia Systems helps small businesses fix and automate messy business systems with practical software, operations, and integration support.">
   <meta property="og:title" content="Garcia Systems | Williamsburg, VA">
-  <meta property="og:description" content="Practical software, automation, and systems consulting for small businesses in Williamsburg, VA. English & Spanish support available.">
+  <meta property="og:description" content="Practical software, automation, and operations support for small businesses in Williamsburg, VA and beyond.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header" id="home">
+  <header class="site-header">
     <div class="container nav-bar">
-      <a class="logo" href="index.html">Garcia Systems</a>
+      <a class="logo" href="#home">Garcia Systems</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
@@ -27,86 +27,72 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero" aria-labelledby="home-heading">
     <div class="container">
-      <p class="eyebrow">Williamsburg, VA · English & Spanish</p>
-      <h1>Garcia Systems</h1>
-      <p class="tagline">Practical software and systems help for small businesses.</p>
+      <p class="eyebrow">Williamsburg, VA · English &amp; Spanish</p>
+      <h1 id="home-heading">Stop Wasting Time on Manual Work</h1>
+      <p class="tagline">I help small businesses fix and automate business systems so they can save time, reduce errors, and run more smoothly.</p>
+      <p class="support-line">Practical software, automation, and operations help for small businesses in Williamsburg, VA and beyond.</p>
       <div class="hero-actions">
-        <a class="btn" href="mailto:david@garciasystems.org">Email Me</a>
-        <a class="btn btn-secondary" href="#services">View Services</a>
+        <a class="btn" href="#contact" aria-label="Get a free business systems review">Get a Free Review</a>
+        <a class="btn btn-secondary" href="#services" aria-label="View service offerings">View Services</a>
       </div>
-      <div class="badges" aria-label="Trust badges">
-        <span class="badge">English & Spanish</span>
-        <span class="badge">Williamsburg, VA</span>
-        <span class="badge">10+ years experience</span>
-      </div>
+      <p class="trust-line">Local • Bilingual • 10+ Years of Technical Experience</p>
     </div>
   </section>
 
   <main class="container">
-    <section id="services" class="card">
-      <h2>What I Help With</h2>
+    <section id="about" class="card" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Garcia Systems</h2>
+      <p>Garcia Systems helps small businesses improve the way their systems work together. I specialize in practical software and automation support that reduces manual work, improves visibility, and helps business owners spend less time fighting technology.</p>
+      <p>With experience in software development, operations, databases, eCommerce workflows, and system integration, I focus on solving real business problems — not selling unnecessary complexity.</p>
+    </section>
+
+    <section id="services" class="card" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
+      <p>Get help with the systems and workflows that keep your business running.</p>
       <div class="services-grid">
         <article class="service-card">
-          <h3>Custom software & automation</h3>
-          <p>Streamline repetitive work with tools built to match your workflow.</p>
+          <h3>Software &amp; Workflow Automation</h3>
+          <p>Automate repetitive tasks and connect tools so your team spends less time on manual work.</p>
         </article>
         <article class="service-card">
-          <h3>Inventory & reporting systems</h3>
-          <p>Clear, reliable tracking for inventory, databases, and daily reporting.</p>
+          <h3>Inventory, Orders &amp; Reporting</h3>
+          <p>Improve tracking, reduce mistakes, and create more reliable systems for inventory, orders, and day-to-day reporting.</p>
         </article>
         <article class="service-card">
-          <h3>Website troubleshooting</h3>
-          <p>Fix broken forms, integrations, and performance issues quickly.</p>
+          <h3>Website &amp; System Troubleshooting</h3>
+          <p>Fix broken forms, setup issues, integrations, and performance problems quickly and clearly.</p>
         </article>
         <article class="service-card">
-          <h3>Technical problem-solving</h3>
-          <p>Practical guidance to untangle system issues without long contracts.</p>
+          <h3>Business Systems Problem-Solving</h3>
+          <p>Get practical help untangling technical issues without long contracts or bloated consulting.</p>
         </article>
+      </div>
+      <div class="value-grid" aria-label="Business outcomes">
+        <article class="value-card"><h3>Save Time</h3><p>Cut hours of manual work each week.</p></article>
+        <article class="value-card"><h3>Reduce Errors</h3><p>Avoid costly process mistakes.</p></article>
+        <article class="value-card"><h3>Improve Efficiency</h3><p>Streamline how your business operates.</p></article>
+        <article class="value-card"><h3>Support Growth</h3><p>Build systems that can scale with you.</p></article>
       </div>
     </section>
 
-    <section id="about" class="card">
-      <h2>Who This Is For</h2>
-      <p>
-        Small businesses, nonprofits, and local organizations that need
-        practical technical help — without agencies or long contracts.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>How It Works</h2>
-      <ol class="steps">
-        <li>
-          <h3>Quick intro call</h3>
-          <p>Share your goals, systems, and the biggest pain points.</p>
-        </li>
-        <li>
-          <h3>Clear plan & estimate</h3>
-          <p>Get a straightforward plan and timeline before any work begins.</p>
-        </li>
-        <li>
-          <h3>Build, test, and handoff</h3>
-          <p>Solutions are delivered with documentation and next steps.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="card contact" id="contact">
-      <h2>Contact</h2>
+    <section class="card contact" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Request a free business systems review. I’ll look at your current setup and help identify what is slowing you down, what can be automated, and what improvements may be worth making first.</p>
       <div class="contact-lines">
         <span class="contact-line">Email: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a></span>
-        <span class="contact-line">Call/Text: <a href="tel:+17577418683">757-741-8683</a></span>
-        <span class="contact-line">LinkedIn: <a href="https://www.linkedin.com/in/netdavid/" target="_blank" rel="noopener noreferrer">linkedin.com/in/netdavid</a></span>
+        <span class="contact-line">Call/Text: <a href="tel:+17577418683">(757) 741-8683</a></span>
         <span class="contact-line">Location: Williamsburg, VA</span>
+        <span class="contact-line">Languages: English &amp; Spanish</span>
       </div>
+      <a class="btn contact-cta" href="mailto:david@garciasystems.org?subject=Free%20Business%20Systems%20Review">Contact Garcia Systems</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Garcia Systems</p>
-    <p class="footer-links">Email: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a> · Call/Text: <a href="tel:+17577418683">757-741-8683</a> · LinkedIn: <a href="https://www.linkedin.com/in/netdavid/" target="_blank" rel="noopener noreferrer">netdavid</a></p>
+    <p>&copy; 2026 Garcia Systems</p>
+    <p class="footer-links">Email: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a> · Call/Text: <a href="tel:+17577418683">(757) 741-8683</a> · Williamsburg, VA</p>
   </footer>
   <script src="script.js"></script>
 </body>
