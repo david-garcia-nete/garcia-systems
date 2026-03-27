@@ -4,92 +4,95 @@
   <meta charset="UTF-8">
   <title>Garcia Systems | Inicio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Software y automatización práctica para negocios. Basado en Williamsburg, VA. Atención en inglés y español.">
+  <meta name="description" content="Garcia Systems ayuda a pequeñas empresas a mejorar y automatizar sistemas de negocio con soporte práctico en software y operaciones.">
   <meta property="og:title" content="Garcia Systems | Inicio">
-  <meta property="og:description" content="Software y automatización práctica para negocios. Basado en Williamsburg, VA. Atención en inglés y español.">
+  <meta property="og:description" content="Apoyo práctico en software, automatización y operaciones para pequeñas empresas en Williamsburg, VA y sus alrededores.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <header class="site-header" id="home">
+  <header class="site-header">
     <div class="container nav-bar">
-      <a class="logo" href="../index.html">Garcia Systems</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+      <a class="logo" href="#home">Garcia Systems</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
-      <nav class="nav" id="primary-nav" aria-label="Main navigation">
+      <nav class="nav" id="primary-nav" aria-label="Navegación principal">
         <a data-nav-item="home" href="#home">Inicio</a>
-        <a data-nav-item="about" href="#about">Nosotros</a>
-        <a data-nav-item="services" href="#servicios">Servicios</a>
+        <a data-nav-item="about" href="#about">Sobre</a>
+        <a data-nav-item="services" href="#services">Servicios</a>
         <a data-nav-item="contact" href="#contact">Contacto</a>
         <a class="lang-switch" data-nav-item="languageToggle" href="../index.html" lang="en">English</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero" aria-labelledby="home-heading">
     <div class="container">
-      <p class="eyebrow">Williamsburg, VA · Inglés y Español</p>
-      <h1>Garcia Systems</h1>
-      <p class="tagline">Ayuda práctica en software y sistemas para que tu negocio siga avanzando.</p>
+      <p class="eyebrow">Williamsburg, VA · Inglés y español</p>
+      <h1 id="home-heading">Deje de perder tiempo en trabajo manual</h1>
+      <p class="tagline">Ayudo a pequeñas empresas a mejorar y automatizar sus sistemas para ahorrar tiempo, reducir errores y trabajar con más eficiencia.</p>
+      <p class="support-line">Apoyo práctico en software, automatización y operaciones para pequeñas empresas en Williamsburg, VA y sus alrededores.</p>
       <div class="hero-actions">
-        <a class="btn" href="mailto:david@garciasystems.org">Escríbeme</a>
-        <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+        <a class="btn" href="#contact" aria-label="Solicitar una revisión gratuita de sistemas">Solicite una revisión gratuita</a>
+        <a class="btn btn-secondary" href="#services" aria-label="Ver servicios">Ver servicios</a>
       </div>
-      <div class="badges" aria-label="Insignias de confianza">
-        <span class="badge">10+ años de experiencia</span>
-        <span class="badge">Integraciones y automatización</span>
-        <span class="badge">Inglés y Español</span>
-      </div>
+      <p class="trust-line">Local • Bilingüe • Más de 10 años de experiencia técnica</p>
     </div>
   </section>
 
   <main class="container">
-    <section id="servicios" class="card">
-      <h2>Servicios principales</h2>
+    <section id="about" class="card" aria-labelledby="about-heading">
+      <h2 id="about-heading">Sobre Garcia Systems</h2>
+      <p>Garcia Systems ayuda a pequeñas empresas a mejorar la forma en que funcionan sus sistemas. Me especializo en soporte práctico de software y automatización para reducir trabajo manual, mejorar la visibilidad de las operaciones y ayudar a los dueños de negocios a dedicar menos tiempo a problemas tecnológicos.</p>
+      <p>Con experiencia en desarrollo de software, operaciones, bases de datos, flujos de comercio electrónico e integración de sistemas, me enfoco en resolver problemas reales del negocio, sin complicaciones innecesarias.</p>
+    </section>
+
+    <section id="services" class="card" aria-labelledby="services-heading">
+      <h2 id="services-heading">Servicios</h2>
+      <p>Reciba ayuda con los sistemas y procesos que mantienen su negocio en marcha.</p>
       <div class="services-grid">
         <article class="service-card">
-          <h3>Software y automatización</h3>
-          <p>Herramientas a la medida que eliminan pasos repetitivos.</p>
+          <h3>Automatización de software y procesos</h3>
+          <p>Automatice tareas repetitivas y conecte sus herramientas para reducir trabajo manual.</p>
         </article>
         <article class="service-card">
-          <h3>Sistemas de inventario y reportes</h3>
-          <p>Seguimiento claro para datos, existencias y operaciones diarias.</p>
+          <h3>Inventario, pedidos y reportes</h3>
+          <p>Mejore el control, reduzca errores y tenga sistemas más confiables para inventario, pedidos y reportes diarios.</p>
         </article>
         <article class="service-card">
-          <h3>Solución de problemas web</h3>
-          <p>Formularios, pagos e integraciones reparados sin rodeos.</p>
+          <h3>Solución de problemas en sitios web y sistemas</h3>
+          <p>Corrija formularios dañados, integraciones, configuraciones y problemas de rendimiento de forma rápida y clara.</p>
         </article>
         <article class="service-card">
-          <h3>Asesoría técnica</h3>
-          <p>Guía práctica para desenredar fallas y tomar decisiones claras.</p>
+          <h3>Resolución práctica de problemas técnicos</h3>
+          <p>Obtenga ayuda directa para resolver problemas de sistemas sin contratos largos ni consultoría inflada.</p>
         </article>
+      </div>
+      <div class="value-grid" aria-label="Resultados de negocio">
+        <article class="value-card"><h3>Ahorre tiempo</h3><p>Reduzca horas de trabajo manual cada semana.</p></article>
+        <article class="value-card"><h3>Reduzca errores</h3><p>Evite fallas costosas en sus procesos.</p></article>
+        <article class="value-card"><h3>Mejore la eficiencia</h3><p>Agilice la operación de su negocio.</p></article>
+        <article class="value-card"><h3>Apoye el crecimiento</h3><p>Prepare sus sistemas para crecer.</p></article>
       </div>
     </section>
 
-    <section id="about" class="card">
-      <h2>Por qué trabajar conmigo</h2>
-      <p>
-        Más de 10 años construyendo y manteniendo sistemas en PHP, Laravel y MySQL, con integraciones confiables.
-        Trabajo desde Williamsburg, VA y de forma remota, comunicándome en inglés y español.
-      </p>
-    </section>
-
-    <section id="contact" class="card contact">
-      <h2>Contacto</h2>
-      <p>Envíame un correo con lo que necesitas y responderé con los próximos pasos.</p>
+    <section id="contact" class="card contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contacto</h2>
+      <p>Solicite una revisión gratuita de sus sistemas. Revisaré su configuración actual para identificar qué está frenando su negocio, qué se puede automatizar y cuáles mejoras conviene hacer primero.</p>
       <div class="contact-lines">
         <span class="contact-line">Correo: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a></span>
-        <span class="contact-line">Llamada/Texto: <a href="tel:+17577418683">757-741-8683</a></span>
-        <span class="contact-line">LinkedIn: <a href="https://www.linkedin.com/in/netdavid/" target="_blank" rel="noopener noreferrer">linkedin.com/in/netdavid</a></span>
-        <span class="contact-line">Ubicación: Williamsburg, VA · Idiomas: Inglés y Español</span>
+        <span class="contact-line">Llamada o texto: <a href="tel:+17577418683">(757) 741-8683</a></span>
+        <span class="contact-line">Ubicación: Williamsburg, VA</span>
+        <span class="contact-line">Idiomas: Español e inglés</span>
       </div>
+      <a class="btn contact-cta" href="mailto:david@garciasystems.org?subject=Revisi%C3%B3n%20gratuita%20de%20sistemas">Contactar a Garcia Systems</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Garcia Systems</p>
-    <p class="footer-links">Email: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a> · Call/Text: <a href="tel:+17577418683">757-741-8683</a> · LinkedIn: <a href="https://www.linkedin.com/in/netdavid/" target="_blank" rel="noopener noreferrer">netdavid</a></p>
+    <p>&copy; 2026 Garcia Systems</p>
+    <p class="footer-links">Correo: <a href="mailto:david@garciasystems.org">david@garciasystems.org</a> · Llamada o texto: <a href="tel:+17577418683">(757) 741-8683</a> · Williamsburg, VA</p>
   </footer>
   <script src="../script.js"></script>
 </body>
