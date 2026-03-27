@@ -280,6 +280,45 @@ h3 {
   font-size: 1rem;
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.about-portrait-wrap {
+  margin: 0;
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.35);
+}
+
+.about-content p {
+  margin: 0 0 0.8rem;
+}
+
+.about-trust-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.35rem 0 0;
+  display: grid;
+  gap: 0.45rem;
+  color: #cbd5f5;
+}
+
+.about-linkedin {
+  display: inline-flex;
+  margin-top: 0.85rem;
+  font-weight: 600;
+  color: #93c5fd;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -473,6 +512,11 @@ footer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.85rem;
     margin-top: 1.2rem;
+  }
+
+  .about-layout {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 1.4rem;
   }
 
   .steps {
